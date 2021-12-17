@@ -9,10 +9,10 @@
 
       <div class="form-group">
         <label for="password">Password : </label>
-        <input type="password" id="password" class="form-group" formControlName="password">
+        <input type="password" id="password" class="form-group" formControlName="password" [(ngModel)]="nbrPassword"> <span class="text-danger" style="font-size: 1rem;" [ngStyle]="{'color': nbrPassword.length > 5 ?'green' : '#DC3545' }"> 6 caratère minimum</span>
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="signUpForm.invalid"> SignUp</button>
     </form>
-    <p class="text-danger">{{ errorMessage }}</p>
+    <p class="text-danger" *ngIf="errorMessage">Email ou mot de passe incorrect </p>
   </div>
 </div>
