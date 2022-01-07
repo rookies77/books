@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { DragAndDropDirective } from './directive/drag-and-drop.directive';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     BookFormComponent,
     SingleBookComponent,
     HeaderComponent,
+    DragAndDropDirective,
 
 
   ],
