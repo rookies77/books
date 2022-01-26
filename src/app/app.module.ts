@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { DragAndDropDirective } from './directive/drag-and-drop.directive';
 import { FilterPipe } from './book-list/filter/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
       appId: "1:313890572963:web:98a2a89a67c6fd363acd16"
     }),
     AngularFireDatabaseModule,
+    NgxPaginationModule
 
 
   ],
