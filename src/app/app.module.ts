@@ -16,6 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { DragAndDropDirective } from './directive/drag-and-drop.directive';
+import { FilterPipe } from './book-list/filter/filter.pipe';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
     SingleBookComponent,
     HeaderComponent,
     DragAndDropDirective,
-
+    FilterPipe
 
   ],
   imports: [

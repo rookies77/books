@@ -13,6 +13,7 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   books!: Book[];
   booksSubscription!: Subscription;
+  search!: String;
 
   constructor(private booksService: BooksService, private router: Router) { }
 
@@ -25,6 +26,7 @@ export class BookListComponent implements OnInit, OnDestroy {
     )
     this.booksService.emitBook();
     this.booksService.getBooks();
+
 
   }
 

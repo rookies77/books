@@ -1,8 +1,12 @@
 <div class="row">
   <div class="col-xs-12 ">
     <h2>Vos livres</h2>
+
+    <div class="form-group">
+      <input type="search" placeholder="Recherche par titre de livre" class="form-control" [(ngModel)]="search">
+    </div>
     <div class="list-group">
-      <button class="list-group-item " style="display: inline-flex;" *ngFor="let book of books; let i = index"
+      <button class="list-group-item " style="display: inline-flex;" *ngFor="let book of books | FilterPipe: search; let i = index"
         (click)="onViewBook(i)">
         <div>
           <img [src]="book.photo" style="max-width: 50px;" >
